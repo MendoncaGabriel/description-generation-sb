@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h2>Novo produto</h2>
+        <div class="containerForm">
+            <div>
+                <label for="type">TIPO:</label><br>
+                <select 
+                id="type"
+                   onchange="persistData(this.id, this.value)"
+               >
+                   <option value="METALIZADO">METALIZADO</option>
+               </select>
+            </div>
+            
+    
+            <div>
+                <label for="name">NOME:</label><br>
+                <input 
+                    type="text" 
+                    id="name" 
+                    placeholder='Modelo ex: BATMAN GEEK' 
+                    style="width: 700px;" 
+                    onchange="persistData(this.id, this.value)"
+                >
+            </div>
+    
+            <div>
+                <label for="ean">EAN:</label><br>
+                <input 
+                    type="text" 
+                    id="ean" 
+                    placeholder="Ean: 7899933991355"
+                    onchange="persistData(this.id, this.value)"
+                >
+            </div>
+    
+            <div>
+                <label for="brand">MARCA:</label><br>
+                <select 
+                    id="brand"
+                    onchange="persistData(this.id, this.value)"
+                >
+                    <option value="PONTO DAS FESTAS">PONTO DAS FESTAS</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="color">TIPO:</label><br>
+                <input 
+                    type="text" 
+                    id="color" 
+                    placeholder="Cor: Azul"
+                    onchange="persistData(this.id, this.value)"
+                > 
+            </div>
+            
+            <div>
+                <label for="id">ID:</label><br>
+                <input 
+                    type="number" 
+                    id="id"  
+                    placeholder="Código: 5460"
+                    onchange="persistData(this.id, this.value)"
+                >
+            </div>
+    
+            <div>
+                <label for="font-size">TAMANHO:</label><br>
+                <input 
+                    type="text" 
+                    id="size" 
+                    placeholder='Tamanho ex: 5"- 12,7'
+                    onchange="persistData(this.id, this.value)"
+                >
+            </div>
+    
+            <div>
+                <label for="amount">QUANTIDADE:</label><br>
+                <input 
+                    type="number" 
+                    id="amount" 
+                    placeholder="Quantidade: 1"
+                    onchange="persistData(this.id, this.value)"
+                >
+            </div>
+    
+        </div>
+        
+    
+        <button onclick="(registerAndGerenator())" class="buttonGerar">GERAR</button>
+
+        <hr>
+        <h2>Gerar descrição do produto</h2>
+        <input type="text" placeholder="referencia || name || ean"><br><br>
+        <div class="container">
+            <div id="render" style="margin: auto; display: block; padding: 10px ; max-width: 1000px;"></div>
+            <div style="font-size: 20px;" id="containerCopy"></div>
+        </div>
+    
+    
+
+
+    </main>
+    
+
+
+
+    
+
+
+
+
+</body>
+</html>
+
+<script src="index.js"></script>
